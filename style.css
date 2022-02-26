@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+html { font-size: 100%; }
+body { font-family: 'Rubik', sans-serif; }
+
+#header {
+  min-height: 18rem;
+  position: relative;
+  background: url(images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1.125em 0;
+}
+.search-box {
+  width: min(90%, 32rem);
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background: #fff;
+  border-radius: .72rem;
+  overflow: hidden;
+}
+.search-input,
+.search-btn {
+  outline: none;
+  border: none;
+}
+.search-input {
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--very-dark-gray);
+  padding: .75rem;
+}
+.search-input::placeholder {
+  font-size: 80%;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+.search-btn {
+  padding: 1.2rem 1.3rem;
+  background: #000;
+}
+
+.info-box {
+  width: min(90%, 60rem);
+  gap: 1.125rem;
+  padding: 1.25rem;
+  margin: auto;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  list-style: none;
+  z-index: 999;
+  border-radius: .72rem;
+  box-shadow: 0 .2rem .5rem .1rem rgba(0,0,0,.4)
+}
+.info-box,
+.info-box li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+span {
+  font-size: .65rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: .6em;
+}
+strong {
+  font-size: 1.125rem;
+  font-weight: 500 !important;
+  color: var(--very-dark-gray);
+  text-align: center;
+}
+#map {
+  height: 80vh;
+}
+
+@media (min-width: 768px) {
+  html { font-size: 112%; }
+  .info-box {
+    flex-direction: row;
+    align-items: start;
+    text-align: start;
+    gap: 2rem;
+  }
+  .info-box li {
+    align-items: flex-start;
+  }
+  .info-box li:not(:first-child) { 
+    padding-left: 1rem;
+    border-left: .125rem solid var(--dark-gray);
+  }
+  strong { text-align: start; }
+}
