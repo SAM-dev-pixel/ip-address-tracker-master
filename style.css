@@ -41,6 +41,7 @@ h1 {
 .search-btn {
   outline: none;
   border: none;
+  transition: .2s;
 }
 .search-input {
   width: 100%;
@@ -58,6 +59,7 @@ h1 {
   padding: 1.2rem 1.3rem;
   background: #000;
 }
+.search-btn:hover { background: var(--very-dark-gray); }
 
 .info-box {
   width: min(90%, 60rem);
@@ -100,6 +102,9 @@ strong {
 
 @media (min-width: 768px) {
   html { font-size: 112%; }
+
+  .search-input,
+  .search-btn { cursor: pointer; }
   .info-box {
     flex-direction: row;
     align-items: start;
